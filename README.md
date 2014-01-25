@@ -1,4 +1,4 @@
-Enterprise-Dashboard
+Content-Management
 ====================
 
 JavaScript Framework handles the building blocks of stringing views together.
