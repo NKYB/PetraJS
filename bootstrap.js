@@ -5,10 +5,10 @@ if(typeof(console) === 'undefined') {
 console.log('App Console Activated!');
 
 window.app = {
-    URL_ROOT: 'http://em901.symprod.com/advisor/',
-    URL_PHP: 'http://em901.symprod.com/advisor/php/',
-    URL_PHP_MODELS: 'http://em901.symprod.com/advisor/php/models/ajax_model.php',
-    URL_PHP_TEMPLATES: 'http://em901.symprod.com/advisor/php/html/ajax_template.php',
+    URL_ROOT: 'http://127.0.0.1/advisor/',
+    URL_PHP: 'http://127.0.0.1/advisor/php/',
+    URL_PHP_MODELS: 'http://127.0.0.1/advisor/php/models/ajax_model.php',
+    URL_PHP_TEMPLATES: 'http://127.0.0.1/advisor/php/html/ajax_template.php',
     EL_ROOT: '#sharepoint_content',
     EL_HEADER: '.pageheader',
     EL_BREADCRUMB: '#breadcrumbs',
