@@ -3,10 +3,11 @@ Content-Management
 
 JavaScript Framework handles the building blocks of stringing views together.
 
+This is the current starting point for my web applications.
+
 Features
 * routing
 * events
-* sharepoint integration (loose)
-* charts
-* templating
-* themes
+* common components (views, forms, buttons, modals)
+* JSON object models
+
