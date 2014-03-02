@@ -10,4 +10,6 @@ Features
 * events
 * common components (views, forms, buttons, modals)
 * JSON object models
+* Bootstrap
+* jQuery
 
