@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    
+    <script type="text/javascript"  src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/core/App.js"></script>
+    <script type="text/javascript" src="js/core/Button.js"></script>
+    <script type="text/javascript" src="js/core/Modal.js"></script>
+    <script type="text/javascript" src="js/app/AppExample.js"></script>
+    <script type="text/javascript" src="js/app/views/ViewUrlManager.js"></script>
+    <script type="text/javascript" src="js/app/buttons/ButtonCreateUrl.js"></script>
+    <script type="text/javascript" src="js/app/modals/ModalCreateUrl.js"></script>
+    <script type="text/javascript" src="js/app/modals/ModalDeleteUrl.js"></script>
+    <script type="text/javascript" src="js/app/models/ModelUrlGroup.js"></script>
+    <script type="text/javascript" src="js/app/models/ModelUrl.js"></script>
+    <script>
+    $(document).ready(function(){
+        appExample.loadView( new ViewUrlManager() );
+    });
+    </script>
+</head>
+<body>
+    
+<div class="container">
+    <div class="header">
+        <h1>Example</h1>
+    </div>
+    <div id="app_content"></div>
+    <div class="footer">
+      <p>&copy; Example 2020</p>
+    </div>
+</div> 
+</body>
+</html>
