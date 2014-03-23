@@ -27,12 +27,13 @@ console.log('App Console Activated!');
         view.show();
     };
     
-    App.prototype.on = function(event_name,fn){
-        this.events[event_name] = fn;
+    App.prototype.on = function(event_name, fn, proxy){
+        this.events[event_name] = $.proxy(fn, proxy);
     }
     
-    App.prototype.trigger = function(event_name){
-        this.events[event_name]();
+    App.prototype.trigger = function(event_name, obj){
+        if (this.events[event_name])
+            this.events[event_name](obj);
     }
     
     App.prototype.setModel = function(model_name, model){
