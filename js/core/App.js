@@ -47,7 +47,11 @@ console.log('App Console Activated!');
     
     App.prototype.loadModel = function(model_name, success_handler, error_handler){
         var self = this;
-        this.ajax(App.GET_MODEL, model_name, {}, function(model){
+        this.ajax(
+            App.GET_MODEL, 
+            model_name, 
+            {}, 
+            function(model){
                 model = self.handleEmptyModel(model_name, model, self);
                 self.setModel(model_name, model);
                 success_handler(model);
