@@ -24,7 +24,7 @@ console.log('App Console Activated!');
     }
     
     App.prototype.loadView = function(view){
-        view.show();
+        new window[view]().show();
     };
     
     App.prototype.on = function(event_name, fn, proxy){
