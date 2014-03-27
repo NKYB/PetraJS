@@ -28,7 +28,7 @@ console.log('App Console Activated!');
         __construct();
     }
     
-    App.prototype.loadView = function(view, parentEl){
+    App.prototype.loadView = function(view, parentEl, parentView){
         var rootEl = (parentEl) ? parentEl : this.EL_ROOT;
         
         for (var viewIndex in this.views){
@@ -44,6 +44,11 @@ console.log('App Console Activated!');
         }
 
         $(rootEl + ' > ' + this.views[view].elRoot).css('display','block');
+        
+        // TODO: this is a hack, insert wizardry here when brain works better
+        if (parentView)
+            $(parentView).css('display','block');
+        
         this.views[view].show();
     };
     
