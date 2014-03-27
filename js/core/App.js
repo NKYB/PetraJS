@@ -2,7 +2,6 @@
  * House cleaning incase there's a console.log left in the prod code and
  * the browser doesn't support the command
  */
-
 if(typeof(console) === 'undefined') {
     var console = {}
     console.log = console.error = console.info = console.debug = console.warn = console.trace = console.dir = console.dirxml = console.group = console.groupEnd = console.time = console.timeEnd = console.assert = console.profile = function() {};
