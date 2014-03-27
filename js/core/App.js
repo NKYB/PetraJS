@@ -16,16 +16,35 @@ console.log('App Console Activated!');
         
         this.urlBackendModels  = 'ajax_model.php';
         
+        this.EL_ROOT = 'body';
+        
         this.models = [];
         
         this.events = [];
+        
+        this.views = [];
 
         function __construct(){} 
         __construct();
     }
     
-    App.prototype.loadView = function(view){
-        new window[view]().show();
+    App.prototype.loadView = function(view, parentEl){
+        var rootEl = (parentEl) ? parentEl : this.EL_ROOT;
+        
+        for (var viewIndex in this.views){
+            $(this.EL_ROOT + ' > ' + this.views[viewIndex].elRoot).css('display','none');
+        }
+        
+        if (!this.views[view]){
+            this.views[view] = new window[view]();
+            this.views[view].elRoot = 'view-' + Math.floor(Math.random() * (99999999 - 10000000 + 1)) + 10000000;
+            $(rootEl).append( '<div id="' + this.views[view].elRoot + '">Error: No View Content</div>' );
+            this.views[view].elRoot = '#' + this.views[view].elRoot;
+            this.views[view].init();
+        }
+
+        $(rootEl + ' > ' + this.views[view].elRoot).css('display','block');
+        this.views[view].show();
     };
     
     App.prototype.on = function(event_name, fn, proxy){
