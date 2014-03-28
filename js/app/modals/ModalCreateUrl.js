@@ -10,13 +10,13 @@
             var modelUrl = new ModelUrl();
             modelUrl.setHref(proxy.getHref())
             
-            var model = appUserMetrics.getModel('ModelUrlGroup');
+            var model = App.getModel('ModelUrlGroup');
             model.addUrl(modelUrl);
-            appUserMetrics.saveModel('ModelUrlGroup');
+            App.saveModel('ModelUrlGroup');
             
             proxy.hide();
             
-            appUserMetrics.trigger(ViewUrlManager.EVENT_TABLE_DATA_UPDATED);
+            App.trigger(Example.EVENT_TABLE_DATA_UPDATED);
             console.log('Submit URL');
         }
 

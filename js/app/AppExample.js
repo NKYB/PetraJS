@@ -1,7 +1,7 @@
 ;(function(window) {
     function AppExample(){
         this.EL_ROOT           = '#app_content';
-        this.urlBackendModels  = 'http://example.com/core/ajax_model.php';
+        this.urlBackendModels  = 'ajax_model.php';
         
         function __construct(){} 
         __construct();
@@ -12,4 +12,4 @@
     window.AppExample = AppExample;
 }(window)); 
 
-var appExample = new AppExample();
+var App = new AppExample();

@@ -10,13 +10,13 @@
 //            var modelUrl = new ModelUrl();
 //            modelUrl.setHref(proxy.getHref())
 //            
-//            var model = appUserMetrics.getModel('ModelUrlGroup');
+//            var model = App.getModel('ModelUrlGroup');
 //            model.addUrl(modelUrl);
-//            appUserMetrics.saveModel('ModelUrlGroup');
+//            App.saveModel('ModelUrlGroup');
 //            
 //            proxy.hide();
 //            
-//            appUserMetrics.trigger(ViewUrlManager.EVENT_TABLE_DATA_UPDATED);
+//            App.trigger(ViewUrlManager.EVENT_TABLE_DATA_UPDATED);
             console.log('Delete URL');
         }
 
@@ -28,13 +28,13 @@
         __construct();
     }
     
-    ModalCreateUrl.prototype = new Modal();
+    ModalDeleteUrl.prototype = new Modal();
     
-    ModalCreateUrl.prototype.getHref = function(){
+    ModalDeleteUrl.prototype.getHref = function(){
         return $('#modal_deleteNewUrl_href').val();
     }
     
-    ModalCreateUrl.prototype.renderBody = function(){
+    ModalDeleteUrl.prototype.renderBody = function(){
         var html = '';
         html += '<div>Url:</div>';
         html += '<div>';
@@ -43,5 +43,5 @@
         return html;
     }
 
-    window.ModalCreateUrl = ModalCreateUrl;
+    window.ModalDeleteUrl = ModalDeleteUrl;
 }(window));
