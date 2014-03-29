@@ -1,15 +1,13 @@
-Content-Management
+PetraJS
 ====================
 
-JavaScript Framework handles the building blocks of stringing views together.
-
-This is the current starting point for my web applications.
+A simple JavaScript Framework that provides the best ideas from Angular, Knockout, Backbone, Ember, CanJS without the convetion entaglements that lead to solving convention problems rather than the actual problem.
 
 Features
 * persistent views
 * events
-* common components (views, forms, buttons, modals)
-* JSON object models
+* common extensable components (views, forms, buttons...)
+* JSON data models
 * Bootstrap
 * jQuery
 
