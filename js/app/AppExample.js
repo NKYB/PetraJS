@@ -13,4 +13,3 @@
 }(window)); 
 
 var App = new AppExample();
-
